@@ -22,10 +22,12 @@ backend/  npm install --save axios bcryptjs body-parser cors express express-val
 mongoose mongoose-unique-validator multer node-geocoder uuid nodemon =>  npm run dev 
 
 
-#database -  just change the names of the 
+# database -  users & places
 
 DONT FORGET !!!
 if you want to apply to server 
 yo need to change this in backend/package.json :
 
 "start" : "node app.js"
+
+in backend/nodemon.json put your google api key 
