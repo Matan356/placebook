@@ -4,6 +4,6 @@
     "DB_PASSWORD": "jQQ4Me4sFKV0ibho",
     "DB_NAME": "mern",
     "JWT_KEY":"supersecret_dont_share",
-    "GOOGLE_API_KEY":"AIzaSyBrU3skspo_N1lmiBGmhxxHDeIFBmB22xc"
+    "GOOGLE_API_KEY":""
   }
 }
