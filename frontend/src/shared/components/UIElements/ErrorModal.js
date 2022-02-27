@@ -37,4 +37,21 @@ const ErrorModal = (props) => {
   };
 };
 
+export const massageModal = (props)=>{
+  return (
+    <Modal
+    onCancel={props.onClear}
+    header={props.header}
+    show={props.massage}
+    footer={
+      <Button  onClick={props.onClear}>
+        Okay
+      </Button>
+    }
+  >
+    <p>{props.error}</p>
+  </Modal>
+  );
+}
+
 export default ErrorModal;

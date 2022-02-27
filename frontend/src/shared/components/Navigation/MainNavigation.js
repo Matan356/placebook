@@ -8,7 +8,8 @@ import Backdrop from "../UIElements/Backdrop";
 import Footer from "./Footer";
 import "./MainNavigation.css";
 
-const MainNavigation = (props) => {
+
+const MainNavigation = () => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
   const openDrawerHandler = () => {

@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { useHistory } from 'react-router-dom';
 
 import Input from '../../shared/components/FormElements/Input';
 import Button from '../../shared/components/FormElements/Button';
@@ -19,6 +18,7 @@ import './PlaceForm.css';
 const NewPlace = () => {
   const auth = useContext(AuthContext);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const [seePlacesMassage]= useState();
   const [formState, inputHandler] = useForm(
     {
       title: {
@@ -41,7 +41,6 @@ const NewPlace = () => {
     false
   );
 const navigate = useNavigate();
-  // const history = useHistory();
 
   const placeSubmitHandler = async event => {
     event.preventDefault();
@@ -54,8 +53,9 @@ const navigate = useNavigate();
       await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/places`, 'POST', formData, {
         Authorization: 'Bearer ' + auth.token
       });
+    localStorage.setItem("seePlacesMassage", seePlacesMassage);
+
       navigate('/')
-      // history.push('/');
     } catch (err) {}
   };
 

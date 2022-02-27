@@ -22,6 +22,7 @@ const Auth = () => {
   const [isLoginMode, setIsLoginMode] = useState(true);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const navigate = useNavigate();
+  const [addPlaceMassage] = useState()
   const [formState, inputHandler, setFormData] = useForm(
     {
       email: {
@@ -81,6 +82,7 @@ const Auth = () => {
             "Content-Type": "application/json",
           }
         );
+        localStorage.setItem("addPlaceMassage", addPlaceMassage);
         auth.login(responseData.userId, responseData.token);
         navigate("/");
       } catch (err) {}
@@ -96,7 +98,7 @@ const Auth = () => {
           "POST",
           formData
         );
-
+        localStorage.setItem("addPlaceMassage", addPlaceMassage);
         auth.login(responseData.userId, responseData.token);
         navigate("/");
       } catch (err) {}
