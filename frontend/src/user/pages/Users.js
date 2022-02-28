@@ -76,7 +76,7 @@ const Users = () => {
           footer={
             <React.Fragment>
               <Button inverse onClick={closeMassage}>
-                OKEY
+              OKAY
               </Button>
             </React.Fragment>
           }
@@ -98,7 +98,7 @@ const Users = () => {
           footer={
             <React.Fragment>
               <Button inverse onClick={closeMassage}>
-                OKEY
+              OKAY
               </Button>
             </React.Fragment>
           }
@@ -118,7 +118,7 @@ const Users = () => {
           footer={
             <React.Fragment>
               <Button inverse onClick={closeMassage}>
-                OKEY
+                OKAY
               </Button>
             </React.Fragment>
           }

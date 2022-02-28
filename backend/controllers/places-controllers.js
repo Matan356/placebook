@@ -110,6 +110,7 @@ const createPlace = async (req, res, next) => {
     sess.startTransaction();
     await createdPlace.save({ session: sess });
     user.places.push(createdPlace);
+    console.log( user.places);
     await user.save({ session: sess });
     await sess.commitTransaction();
   } catch (err) {
@@ -222,3 +223,5 @@ exports.getPlacesByUserId = getPlacesByUserId;
 exports.createPlace = createPlace;
 exports.updatePlace = updatePlace;
 exports.deletePlace = deletePlace;
+
+
